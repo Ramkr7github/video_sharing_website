@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
-import ytLogo from "../images/yt-logo.png";
-import ytLogoMobile from "../images/yt-logo-mobile.png";
+import Logo from "../images/logo-app.png";
+//import ytLogoMobile from "../images/yt-logo-mobile.png";
 
 import { SlMenu } from "react-icons/sl";
 import { IoIosSearch } from "react-icons/io";
@@ -12,6 +12,7 @@ import { CgClose } from "react-icons/cg";
 
 import { Context } from "../context/contextApi";
 import Loader from "../shared/loader";
+
 
 const Header = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -31,6 +32,7 @@ const Header = () => {
 
   const mobileMenuToggle = () => {
     setMobileMenu(!mobileMenu);
+    
   };
 
   const { pathname } = useLocation();
@@ -48,18 +50,20 @@ const Header = () => {
           >
             {mobileMenu ? (
               <CgClose className="text-white text-xl" />
+              
             ) : (
               <SlMenu className="text-white text-xl" />
             )}
+            
           </div>
         )}
         <Link to="/" className="flex h-5 items-center">
           <img
-            className="h-full hidden md:block w-24 "
-            src={ytLogo}
+            className="h-full hidden md:block w-12 ml-4 "
+            src={Logo}
             alt="Youtube"
           />
-          <img className="h-full md:hidden" src={ytLogoMobile} alt="Youtube" />
+          <img className="h-full md:hidden" src={Logo} alt="Youtube" />
         </Link>
       </div>
       <div className="group flex items-center">

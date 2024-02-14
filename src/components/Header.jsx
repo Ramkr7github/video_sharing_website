@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
-import Logo from "../images/logo-app.png";
-//import ytLogoMobile from "../images/yt-logo-mobile.png";
+import Logo from "../images/yt-logo.png";
+import ytLogoMobile from "../images/yt-logo-mobile.png";
 
 import { SlMenu } from "react-icons/sl";
 import { IoIosSearch } from "react-icons/io";
@@ -59,11 +59,11 @@ const Header = () => {
         )}
         <Link to="/" className="flex h-5 items-center">
           <img
-            className="h-full hidden md:block w-12 ml-4 "
+            className="h-full hidden md:block w-32 "
             src={Logo}
             alt="Youtube"
           />
-          <img className="h-full md:hidden" src={Logo} alt="Youtube" />
+          <img className="h-full md:hidden" src={ytLogoMobile} alt="Youtube" />
         </Link>
       </div>
       <div className="group flex items-center">
